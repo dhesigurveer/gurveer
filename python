@@ -120,3 +120,37 @@ class cestarcollege:
     print(student1.first_name)
     print(student2.student_id)
     print(student1.last_name)                                end
+    
+    
+    
+    
+    
+    
+    
+    class credit:
+    def __init__(self, name, number, balance, limit, ):
+        self.name = name
+        self.number = number
+        self.balance = balance
+        self.limit = limit
+        
+
+    def getbalance(self):
+       return 100
+    def getname(self):
+       return self.name
+    def getnumber(self):
+       return self.number
+    def getlimit(self):
+       return self.number
+    def getlimit(self):
+       return self.limit
+
+name1 = credit("jone", "112233665544", "5000", "5000",)
+name2 = credit("sam","114455889966", "6000","5000",)
+name3 = credit("smith","885544779966","4000","600",)
+
+print (name1.getname())
+print (name1.getbalance())
+print (name1.getnumber())
+print (name2.getlimit())
