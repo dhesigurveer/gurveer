@@ -1,0 +1,19 @@
+example of java 
+Scanner input = new Scanner (System.in);
+        int number1;
+        System.out.println("enter the number 1");
+        number1=input.nextInt();
+        int number2;
+        System.out.println("enter the number 2");
+        number2=input.nextInt();
+        double sum = number1+number2;
+        System.out.println("sum is "+ sum);
+    }
+STRING COMMAND
+  String first = "harmanpreet";
+        String last = "singh";
+        String fullName; 
+        fullName = first +" " + last;
+        
+        
+        System.out.println("My full name is:" + fullName);
