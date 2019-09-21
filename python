@@ -1,0 +1,29 @@
+week 3
+
+
+class student:
+
+    def __init__(self, first_name, last_name, student_id):
+        self.first_name = first_name
+        self.last_name = last_name
+        self.student_id = student_id
+
+
+
+
+class cestarcollege:
+
+
+
+    def __init__(self,address,manager):
+            self.address = address
+            self.manager = manager
+
+
+
+    student1 = student("harman","singh","c0760749")
+    student2 = student("simran","singh","c0760887")
+
+    print(student1.first_name)
+    print(student2.student_id)
+    print(student1.last_name)                                end
