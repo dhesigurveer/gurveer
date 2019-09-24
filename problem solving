@@ -17,3 +17,45 @@ STRING COMMAND
         
         
         System.out.println("My full name is:" + fullName);
+        
+        
+        
+        
+        
+        
+        
+        weeek 3
+        
+        { Scanner input = new Scanner(System. in);
+    System.out.println("Item name");
+    String ItemName = input.nextLine();
+    System.out.println("OriginalPrice" );
+    int OriginalPrice = input.nextInt();
+    System.out.println("DiscountRate" );
+    int DiscountRate = input.nextInt();
+    
+    
+    
+    int amountsaved;
+    amountsaved = (OriginalPrice*DiscountRate)/100;
+    int SalePrice;    
+        SalePrice = OriginalPrice-amountsaved;
+        
+    Double Tax = SalePrice*0.065;
+    Double Totalprice = SalePrice + Tax;
+    
+    
+System.out.println("totalPrice of " + ItemName +" " + Totalprice);
+
+
+
+
+System.out.println("Total SalePrice of " + ItemName + " is " + SalePrice );
+
+
+System.out.println("Total tax of " + ItemName + " is " + Tax );
+
+}
+
+
+endd
