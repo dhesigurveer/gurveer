@@ -1,0 +1,93 @@
+# gurveer
+week 4
+create table Warehouse (
+ Item_number varchar (20),
+ Item_description varchar (20),
+ shelve_number varchar (20),
+ Quantity_in_stock int,
+ price int,
+ primary key (Item_number),
+ );
+ select*from Warehouse
+
+
+ create table truck (
+ truck_number varchar (20),
+ driver_name varchar (20),
+ order_number varchar (20),
+ primary key (truck_number),
+ );
+ select*from truck
+
+
+ insert into Warehouse
+
+
+
+
+insert into  warehouse (Item_number, Item_description ,shelve_number,Quantity_in_stock, price) 
+values ('1','Fridge','4' ,'9','2');
+
+insert into  warehouse (Item_number, Item_description ,shelve_number,Quantity_in_stock, price) 
+values ('2','machine','6' ,'6','9');
+
+insert into  warehouse (Item_number, Item_description ,shelve_number,Quantity_in_stock, price) 
+values ('3','perfume','9' ,'3','1');
+
+insert into  warehouse (Item_number, Item_description ,shelve_number,Quantity_in_stock, price) 
+values ('4','microwave','5' ,'4','4');
+
+insert into  warehouse (Item_number, Item_description ,shelve_number,Quantity_in_stock, price) 
+values ('5','bed','2' ,'5','5');
+
+
+select*from Warehouse
+
+
+
+
+delete Warehouse
+
+insert into  truck( truck_number, driver_name ,order_number) 
+values ('a101','amrit','11');
+insert into  truck( truck_number, driver_name ,order_number) 
+values ('a102','ram','22');
+insert into  truck( truck_number, driver_name ,order_number) 
+values ('a103','john','33');
+insert into  truck( truck_number, driver_name ,order_number) 
+values ('a104','john','44');
+insert into  truck( truck_number, driver_name ,order_number) 
+values ('a105','john','55');
+
+
+select*from truck
+
+delete truck
+create table orders (
+order_id varchar (20),
+Item_number varchar (20),
+truck_number varchar (20),
+primary key (order_id),
+ );
+  select*from orders
+
+
+  
+insert into  orders( order_id, Item_number ,truck_number) 
+values ('11','1','a101');
+  
+insert into  orders( order_id, Item_number ,truck_number) 
+values ('22','2','a102');  
+insert into  orders( order_id, Item_number ,truck_number) 
+values ('33','3','a103');
+  
+insert into  orders( order_id, Item_number ,truck_number) 
+values ('44','4','a104');  
+insert into  orders( order_id, Item_number ,truck_number) 
+values ('55','5','a105');
+
+select*from orders
+delete orders
+
+select* from orders  O,truck t, Warehouse W
+where O.Item_number = W.Item_number and t.truck_number=O.truck_number
