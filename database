@@ -138,3 +138,15 @@ delete orders
 
 select* from orders  O,truck t, Warehouse W
 where O.Item_number = W.Item_number and t.truck_number=O.truck_number
+
+
+
+
+
+use farmerjoe_
+go
+select veggies.veggie_id, veggies.veggie_name, lot.lot_id, lot.lot_name from veggies
+
+inner join lot
+on lot.veggie_id , veggies.veggie_id
+order by veggies.veggie_id
