@@ -154,3 +154,24 @@ print (name1.getname())
 print (name1.getbalance())
 print (name1.getnumber())
 print (name2.getlimit())
+
+
+
+🚅class activity
+
+
+
+import math
+class circle:
+    def __init__(self,radius):
+        self.radius = radius
+
+    def getarea(self):
+        return math.pi * self.radius ** 2
+
+    def getparameter(self):
+        return 2 * math.pi * self.radius
+
+circle1 = circle(1)
+print(circle1.getarea())
+print(circle1.getparameter())
