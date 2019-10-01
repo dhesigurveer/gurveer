@@ -59,3 +59,31 @@ System.out.println("Total tax of " + ItemName + " is " + Tax );
 
 
 endd
+
+
+
+
+public class MethodJavaJava {
+    public static double average(int x , int y) {
+            double avg = (x+y)/2.0;
+            return avg;
+    }
+    public static void showemessage(){
+        System.out.println("hello: welcome to lambton");
+        
+    }
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+        System.out.println("please enter the value");
+        int x = input.nextInt();
+        int y = input.nextInt();
+        double avg = average(x,y);
+        System.out.println("the average is" + avg)
+        
+    }
+    
+}
+
