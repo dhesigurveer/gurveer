@@ -150,3 +150,145 @@ select veggies.veggie_id, veggies.veggie_name, lot.lot_id, lot.lot_name from veg
 inner join lot
 on lot.veggie_id , veggies.veggie_id
 order by veggies.veggie_id
+
+
+
+
+// insert stored proc sql to generate WAREHOUSE TABLE
+CREATE PROCEDURE Generatewarehousetable
+AS
+BEGIN
+SET NOCOUNT ON;
+Create table Warehouse(
+Item_Id Varchar(20),
+Item_Discription Varchar(20),
+Item_Qty int,
+Item_cost money,
+Primary key (Item_Id)
+);
+END
+GO
+  
+// insert stored proc sql to generate ORDER TABLE
+  
+// insert stored proc sql to generate TRUCKS TABLE
+  
+// insert stored proc sql to insert ORDER TABLE data
+  
+// insert stored proc sql to insert TRUCKS TABLE data
+  
+// insert stored proc sql to insert WAREHOUSE TABLE data
+  
+// insert stored proc sql to GENERATE THE PACKING LIST
+use kiwi
+ 
+create procedure Warehouse_data_
+as
+begin
+ set nocount on
+INSERT INTO Warehouse (Item_id, Item_Qty, Item_cost, Item_Discription)  VALUES ( 1  , 23, '200','Iphone 7');
+INSERT INTO Warehouse (Item_id, Item_Qty, Item_cost, Item_Discription)  VALUES ( 2  , 56 , '345','Tablet');
+INSERT INTO Warehouse (Item_id, Item_Qty, Item_cost, Item_Discription)  VALUES ( 3  , 89 , '657','Samsung Tv');
+INSERT INTO Warehouse (Item_id, Item_Qty, Item_cost, Item_Discription)  VALUES ( 4  ,  34,'700' ,'Mac');
+INSERT INTO Warehouse (Item_id, Item_Qty, Item_cost, Item_Discription)  VALUES ( 6  , 67   ,'100' ,'Personal Computer');
+INSERT INTO Warehouse (Item_id, Item_Qty, Item_cost, Item_Discription)  VALUES ( 7  ,  45  ,'10000' ,'Hower');
+INSERT INTO Warehouse (Item_id, Item_Qty, Item_cost, Item_Discription)  VALUES ( 8  ,  67  ,'500' ,'Furniture');
+INSERT INTO Warehouse (Item_id, Item_Qty, Item_cost, Item_Discription)  VALUES ( 9  ,   90 ,'400' ,'Dressing Table ');
+INSERT INTO Warehouse (Item_id, Item_Qty, Item_cost, Item_Discription)  VALUES ( 10  ,  23  , '690','Clothes');
+end
+ 
+ 
+ 
+ 
+CREATE PROCEDURE dbo.GenerateOrdersTable
+AS
+BEGIN
+SET NOCOUNT ON;
+CREATE TABLE ORDERS(
+ORDER_ID VARCHAR(20),
+ITEM_QTY INT,
+ITEM_ID VARCHAR(20),
+TRUCK_ID VARCHAR(20),
+PRIMARY KEY (ORDER_ID)
+);
+END
+GO
+SELECT*FROM ORDERS
+ 
+ 
+ 
+ 
+CREATE PROCEDURE generateorderdata
+AS
+BEGIN
+    SET NOCOUNT ON;
+INSERT INTO ORDERS (ORDER_ID, ITEM_QTY, ITEM_ID, TRUCK_ID) VALUES ('1', '2', '1', 'T1');
+INSERT INTO ORDERS (ORDER_ID, ITEM_QTY, ITEM_ID, TRUCK_ID) VALUES ('2', '1', '2', 'T2');
+INSERT INTO ORDERS (ORDER_ID, ITEM_QTY, ITEM_ID, TRUCK_ID) VALUES ('3', '3', '3', 'T3');
+INSERT INTO ORDERS (ORDER_ID, ITEM_QTY, ITEM_ID, TRUCK_ID) VALUES ('4', '1', '4', 'T4');
+INSERT INTO ORDERS (ORDER_ID, ITEM_QTY, ITEM_ID, TRUCK_ID) VALUES ('5', '1', '5', 'T5');
+INSERT INTO ORDERS (ORDER_ID, ITEM_QTY, ITEM_ID, TRUCK_ID) VALUES ('6', '1', '6', 'T6');
+INSERT INTO ORDERS (ORDER_ID, ITEM_QTY, ITEM_ID, TRUCK_ID) VALUES ('7', '1', '7', 'T7');
+INSERT INTO ORDERS (ORDER_ID, ITEM_QTY, ITEM_ID, TRUCK_ID) VALUES ('8', '3', '8', 'T8');
+INSERT INTO ORDERS (ORDER_ID, ITEM_QTY, ITEM_ID, TRUCK_ID) VALUES ('9', '4', '9', 'T9');
+INSERT INTO ORDERS (ORDER_ID, ITEM_QTY, ITEM_ID, TRUCK_ID) VALUES ('10', '5', '10', 'T10');
+INSERT INTO ORDERS (ORDER_ID, ITEM_QTY, ITEM_ID, TRUCK_ID) VALUES ('11', '3', '11', 'T11');
+INSERT INTO ORDERS (ORDER_ID, ITEM_QTY, ITEM_ID, TRUCK_ID) VALUES ('12', '4', '12', 'T12');
+END
+GO
+ 
+ 
+ 
+CREATE PROCEDURE dbo.GenerateTrucksTable
+AS
+BEGIN
+    SET NOCOUNT ON;
+create table TRUCKS(
+TRUCK_ID varchar(20),
+TRUCK_NUMBER varchar(20),
+primary key (TRUCK_ID)
+);
+END
+GO
+ 
+CREATE PROCEDURE InsertTrucksData
+AS
+BEGIN
+    SET NOCOUNT ON;
+Insert into TRUCKS(TRUCK_ID,TRUCK_NUMBER)
+ VALUES ('T1','123');
+Insert into TRUCKS(TRUCK_ID,TRUCK_NUMBER )
+ VALUES ('T2','356');
+Insert into TRUCKS(TRUCK_ID,TRUCK_NUMBER ) 
+VALUES ('T3','908');
+Insert into TRUCKS(TRUCK_ID,TRUCK_NUMBER)
+ VALUES ('T4','675');
+Insert into TRUCKS(TRUCK_ID,TRUCK_NUMBER 
+) VALUES ('T5','234');
+Insert into TRUCKS(TRUCK_ID,TRUCK_NUMBER)
+ VALUES ('T6','098');
+Insert into TRUCKS(TRUCK_ID,TRUCK_NUMBER)
+ VALUES ('T7','789');
+Insert into TRUCKS(TRUCK_ID,TRUCK_NUMBER)
+ VALUES ('T8','906');
+Insert into TRUCKS(TRUCK_ID,TRUCK_NUMBER)
+ VALUES ('T9','453');
+Insert into TRUCKS(TRUCK_ID,TRUCK_NUMBER)
+ VALUES ('T10','210');
+  
+END
+GO
+ 
+ 
+ 
+CREATE PROCEDURE GeneratePackingSheet 
+AS
+BEGIN
+    SET NOCOUNT ON;
+ 
+    select * from ORDERS as O, TRUCKS as T, Warehouse as W
+    where O.ITEM_ID = W.ITEM_ID and O.TRUCK_ID = T.TRUCK_ID 
+ 
+END
+GO
+ 
