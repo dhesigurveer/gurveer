@@ -1,0 +1,15 @@
+ public static void main(String[] args) {
+        Scanner input = new Scanner (System.in);
+        System.out.println("please enter the first number");
+        int value1;
+        value1= input.nextInt();
+        System.out.println("please enter the second number");
+        int value2 = input.nextInt();
+        
+        if(value1>value2)
+            System.out.println(value1 +" is greater than " + value2);
+        else
+            System.out.println(value2 +" is greater than " +value1);
+    }
+    
+}
