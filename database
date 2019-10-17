@@ -278,6 +278,49 @@ Insert into TRUCKS(TRUCK_ID,TRUCK_NUMBER)
   
 END
 GO
+
+
+
+
+
+
+
+create table HOTEL_SERVICES (
+ CUSTOMER_ID varchar (20),
+ HOTEL_ENTERTAINMENT varchar (20),
+ HOTEL_SPECIALOFFER varchar (20),
+ HOTEL_SECURITY varchar (20),
+
+ primary key (CUSTOMER_ID),
+ );
+
+ create table ROOM_SCHEDULE(
+ ROOM_NUMBER varchar (20),
+ CANCEL_RESERVATION varchar (20),
+ CUSTOMER_ID varchar (20),
+ CHECK_IN varchar (20),
+ CHECK_OUT varchar (20),
+
+ primary key (ROOM_NUMBER),
+ );
+
+ 
+ create table FOOD_SERVING(
+ CHEF_ID varchar (20),
+ MENU_MAKING varchar (20),
+ ROOM_NUMBER varchar (20),
+ FOOD_SCHEDULE varchar (20),
+
+ primary key (CHEF_ID),
+ );
+
+  create table HOTEL_CLEANING(
+ STAFF_ID varchar (20),
+ ROOM_NUMBER varchar (20),
+
+ primary key (STAFF_ID),
+ );
+ 
  
  
  
