@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" href="RESUME.CSS"><!-- css file -->
+</head>
+
+
+<body>
+
+<header>
+  <h2 id = header> <img src="me2.JPG" align = "left" width="150" height="150"> <BR> GURVEER SINGH </h2><!-- image -->
+</header>
+
+<section>
+  <nav>
+    <ul>
+       <li><a href="#address">Address</a></li><!-- identity -->
+	  <li><a href="#email">Email</a></li><!-- identity -->
+	  <li><a href="#mobile">Mobile no.</a></li><!-- identity -->
+	   <li><a href="#objective">Objective</a></li>
+      <li><a href="#education">Education</a></li>
+	    <li><a href="#skills">Skills</a></li>
+      <li><a href="#availability">Availability</a></li>
+    </ul>
+  </nav>
+  
+ <article>
+    <h2 id =address>Address:</h2>
+    <p> 15 SHERINGHAM STREET, BRAMPTON, ON (( L6Z 2P5)</p>
+	<h2 id = email>Email:</h2>
+	<p> DHESIGURVEER3@GMAIL.COM </p>
+	<h2 id = mobile> Mobile no. </h2>
+	<p> +1 (587) 914 0002 </p>
+	<h2 id = objective>Objetcive:</h2>
+	<p>Self-motivated and dependable while achieving high performance with
+minimal supervision. Demonstrated the ability to complete tasks interruptions
+and completing demands.<br>Friendly,motivated and determined student seeking for a part-time job in a leading-edge company delivering quality services, to make my own professional identity
+and utilize & coordinate my skills and aptitudes for the progress of the Organization.</p>
+
+ <h2 id = skills>Skills:</h2>
+    <p> <ul>
+    <li>Computer skills(knowledge of MS words , Excel, HTML and more</li>
+     <li>Time management</li> 
+	 <li>Positive attitude</li>
+      <li>Teamwork</li>
+      <li>Active listening</li>
+      <li>Excellent communication</li>
+      <li>File/Records maintenance </li>
+	  <li>positive learning process </li>	</ul> </p>
+    <h2 id = education> Education:</h2>
+	<p> High School Education (2017-2018),GMSSS-32C School, India.<br> Computer Programmer (In Progress) , Lambton College, Toronto. <br> Duration : 2019-2021 </p> 
+   
+	  
+	  <h2 id = skills>Skills:</h2>
+    <p> <ol>
+    <li>Can handle heavy workload</li>
+     <li>Time management</li> 
+	 <li>Positive attitude</li>
+      <li>Teamwork</li>
+      <li>Active listening</li>
+      <li>Excellent communication</li>
+      <li>File/Records maintenance </li>
+	  <li>positive learning process </li>	</ol> </p>
+	  <style>
+    table,th,td{
+ border: 1px solid black;
+ border-collapse: collapse;}
+ </style>
+    <h2 style =  "text-align:100%" id = availability> Availability </h2>
+
+ <table style= "width:100%">
+  <tr>
+    <th>Sunday</th>
+    <th>Monday</th>
+    <th>Tuesday</th>
+    <th>Wednesday</th>
+    <th>Thursday</th>
+    <th>Friday</th>
+    <th>Saturday</th>
+  </tr>
+  <tr>
+    <td> Full Time </td>
+    <td> Full Time </td>
+    <td> 3pm-Next morning </td>
+    <td> Not Available </td>
+    <td> Night Shift </td>
+    <td> Full Time </td>
+    <td> Night Shift </td>
+   </tr>
+ </table>
+ <button > <a href =  "file://storage/storage$/760037/Desktop/Assignment%20job%20application.html" target = "form" > Job application </a> </button> <br>
+  <iframe name = "form" height="100" width="800" style = "border: none" background-color = "white"></iframe> 
+<h2>Hobbies</h2>
+<p><ol><li>To listen to music.</li>
+<li>To watching movies.</li></ol></p>
+<audio controls>
+  <source src="Aaisa Gur Wadbhagi Paya - Bhai Davinder Singh Hazoori Ragi Shri Darbar Sahib (DJJOhAL.Com).ogg" type="audio/ogg">
+  <source src="Aaisa Gur Wadbhagi Paya - Bhai Davinder Singh Hazoori Ragi Shri Darbar Sahib (DJJOhAL.Com).mp3" type="audio/mpeg">
+Your browser does not support the audio element.
+</audio><br>
+<video width="400" height="300" controls>
+  <source src="Khandani Munda Ft. Gurlez Akhtar (DJJOhAL.Com).mp4" type="video/mp4">
+  <source src="Khandani Munda Ft. Gurlez Akhtar (DJJOhAL.Com).ogg" type="video/ogg">
+  Your browser does not support the video tag.
+</video>
+
+  </article>
+
+</section>
+
+<footer>
+  <p>Thanks</p>
+  <p> <a href="#header">click here to go to top</a></p>
+</footer>
+  <h2><b>Contact me:</h2>
+<form action="/action_page.php" target="_blank">
+  Email:<br>
+  <input type="text" value="dhesigurveer3@gmail.com">
+  <br>
+  <input type="submit" value="Submit">
+</form> 
+
+<script>
+function myFunction() {
+  document.getElementById("address").style.fontSize = "25px"; 
+  document.getElementById("address").style.color = "red";
+  document.getElementById("skills").style.backgroundColor = "MediumTurquoise  ";        
+}
+</script><br>
+<br>
+<button type="button"
+onclick="document.getElementById('demo').innerHTML = Date()">
+Click me to display Date and Time.</button>
+
+<p id="demo"></p>
+
+<button type="button" onclick="myFunction()">Click Me!</button>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+csss
+
+
+
+
+
+
+body {
+  font-family: Arial;
+}
+header {
+  background-color: Aqua;
+  padding: 30px;
+  text-align: center;
+  font-size: 35px;
+  color: red;
+}
+nav {
+  float: left;
+  width: 20%;
+  height: 1400px;  
+  background: Bisque ;
+  padding: 20px;
+  color:red;
+}
+nav ul {
+  list-style-type:none;
+  padding: 5px;
+}
+article {
+  float: left;
+  padding: 20px;
+  width: 70%;
+  background-color:Salmon ;
+  height:1600px;
+  color:white;
+}
+section:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+footer {
+  background-color:LightSkyBlue;
+  padding: 10px;
+  text-align: center;
+  color: red;
+}
