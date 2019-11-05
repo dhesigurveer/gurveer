@@ -1,0 +1,20 @@
+The Python Code
+def main():
+    age = getAge()
+    weight = getWeight()
+    birthMonth = getMonth()
+    correctAnswers(age, weight, birthMonth)
+def getAge():
+    age = input ("Enter your guess for age: ")
+    return age
+def getWeight():
+    weight = input ("Enter your guess for weight: ")
+    return weight
+def getMonth():
+    birthMonth = raw_input ("Enter your guess for birth month: ")
+    return birthMonth
+def correctAnswers (age, weight, birthMonth):
+    if age<=25:
+        print "Congratulations, the age is 25 or less"
+    if weight>=128:
+        print "Congratulations, the weight is 128 or more"
