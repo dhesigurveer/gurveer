@@ -18,3 +18,8 @@ def correctAnswers (age, weight, birthMonth):
         print "Congratulations, the age is 25 or less"
     if weight>=128:
         print "Congratulations, the weight is 128 or more"
+    if birthMonth=="April" or "april":
+        print "Congratulations, the birth month is April"
+main()
+
+
