@@ -339,4 +339,23 @@ GO
 
 select(c.cost_of_cloth*s.qty) total_value, c.type_of_cloth from CLOTHES c , CLOTHINGSTORE s , ORDERS o 
 where type_of_cloth = 'Jacket' and c.cloth_id = o.cloth_id and o.cloth_id = s.cloth_id
+
+
+
+
+
+
+
+asssignment 10% november 6
+
+
+
+
+USE adventureWorkS2012
+
+select * from dbo.pickering
+
+where solddate > '2019/9/1'
+
+order by dbo.pickering.solddate asc;
  
