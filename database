@@ -358,4 +358,19 @@ select * from dbo.pickering
 where solddate > '2019/9/1'
 
 order by dbo.pickering.solddate asc;
+
+select count(*) from dbo.bramptondata
+where solddate >= '2019/9/1'
+
+
+
+select  Type, 
+avg ([Sold Price]) as average , Description from bramptondata 
+group by  Type	, Description
+
+
+select  Type, 
+avg ([Sold Price]) as average , Description , Bedroom from bramptondata 
+group by  Type	, Description , Bedroom
+order by avg([Sold Price]) desc;
  
