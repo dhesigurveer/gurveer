@@ -376,13 +376,14 @@ order by avg([Sold Price]) desc;
  
  
  
- select Community, type, description, bedroom ,
-avg([sold price]) as AVGSoldPrice
+ 
+
+select Community, type, description, bedroom ,
+avg([Sold Price]) as AVGSoldPrice
 from bramptondata
 where Bedroom between 2 and 3
-group by Community, type, description, Bedroom
-order by avg([sold price]) desc;
-
+group by ([Sold Price]), Community, type, description, Bedroom
+order by avg([Sold Price]) desc;
 
 
 select Community, type, description, bedroom, solddate,
