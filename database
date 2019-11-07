@@ -374,3 +374,20 @@ avg ([Sold Price]) as average , Description , Bedroom from bramptondata
 group by  Type	, Description , Bedroom
 order by avg([Sold Price]) desc;
  
+ 
+ 
+ select Community, type, description, bedroom ,
+avg([sold price]) as AVGSoldPrice
+from bramptondata
+where Bedroom between 2 and 3
+group by Community, type, description, Bedroom
+order by avg([sold price]) desc;
+
+
+
+select Community, type, description, bedroom, solddate,
+avg([sold price]) as AVGSoldPrice
+from bramptondata
+where month(SoldDate) between 9 and 10
+group by SoldDate, Community, type, description, Bedroom
+order by avg([sold price]) desc;
