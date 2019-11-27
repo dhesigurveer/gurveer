@@ -450,3 +450,32 @@ select* from tblTransaction as T
 inner join (select* from tblEmployee where EmployeeLastName like 'y%') as E
  on E.EmployeeNumber = T. EmployeeNumber
 order by T. EmployeeNumber
+
+
+select* from shoes
+select* from customersales
+
+select * from sys. objects
+where name like '%sales%'
+or name like '%shoes%'
+
+
+alter table shoes
+ADD CONSTRAINT PK_SaleRecord_Id PRIMARY KEY (color, style, brandname)
+
+ALTER TABLE shoes 
+ALTER COLUMN brandname nvarchar(255) NOT NULL;
+
+
+alter table customersales            
+alter column color nvarchar(255) not null;
+
+
+use [november 27]InClassWork;
+
+
+select customername, purchasedate, color ,style, brandname from customersales
+group by customername, purchasedate, color, style, brandname;
+
+
+alter table customersales
