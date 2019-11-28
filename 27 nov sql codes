@@ -1,0 +1,105 @@
+ -----------------------------------27 nov 
+ select*from shoes
+select*from customersales
+
+select customername, purchasedate, color, style, brandname from customersales
+group by  customername, purchasedate, color, style, brandname
+
+select*from sys.objects
+where name like '%sales'
+or name like '%shoes';
+
+alter table shoes 
+alter column price float not null
+
+alter table shoes 
+alter column color nvarchar(255) not null
+
+alter table shoes 
+alter column style nvarchar(255) not null
+
+
+alter table shoes 
+alter column brandname nvarchar(255) not null
+
+alter table shoes
+ add constraint PK_SalesRecord PRIMARY KEY (color, style, brandname)
+
+alter table customersales 
+alter column customername nvarchar(255) not null
+
+alter table customersales 
+alter column purchasedate nvarchar(255) not null
+
+alter table customersales 
+alter column color nvarchar(255) not null
+
+alter table customersales 
+alter column style nvarchar(255) not null
+
+alter table customersales 
+alter column brandname nvarchar(255) not null
+
+alter table customersales
+add constraint PK_CustomerRecord PRIMARY KEY (customername, purchasedate,color,style, brandname)
+
+ alter table customersales
+ drop constraint PK_CustomerRecord
+
+
+alter table customersales
+add constraint FK_SalesConstraint FOREIGN KEY (color,style, brandname)
+  references shoes(color,style, brandname)
+  on delete cascade
+  on update cascade
+
+select * from customersales
+where customername = 'roy'
+
+delete from customersales 
+where customername ='Roy' and color = 'blue' and style ='formal' and brandname ='Nike.'
+
+insert into customersales(customername, purchasedate,color,style, brandname) values('Roy','4/6/19','blue','formal','Nike.')
+insert into customersales(customername, purchasedate,color,style, brandname) values('Roy','7/6/2020','blue','formal','Nike.')
+insert into customersales(customername, purchasedate,color,style, brandname) values('jorge','29/11/2019', 'red' , 'formal', 'Air_Nike')
+insert shoes(price,color,style, brandname) values('658', 'red' , 'formal', 'Air_Nike')
+
+
+select sum(s.price) as TotalSalesPrice from shoes as s, customersales as c
+where s.color = c.color and 
+s.brandname = c.brandname and
+s.style = c.style and 
+month(c.purchasedate) between 2 and 4
+
+
+select * from customersales as c, shoes as s
+where c.brandname = s.brandname and 
+c.color = s.color and 
+c.style = s.style and
+month(c.purchasedate) between 1 and 4; 
+
+select * from customersales as c, shoes as s
+where c.brandname = s.brandname and 
+c.color = s.color and 
+c.style = s.style and
+upper(s.color) = upper('green')
+
+select * from customersales as c, shoes as s
+where c.brandname = s.brandname and 
+c.color = s.color and 
+c.style = s.style and
+upper(c.customername) in ('John', 'Suzan')
+
+
+© 2019 GitHub, Inc.
+Terms
+Privacy
+Security
+Status
+Help
+Contact GitHub
+Pricing
+API
+Training
+Blog
+About
