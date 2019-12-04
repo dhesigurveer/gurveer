@@ -1,0 +1,107 @@
+select * from lastyear
+
+select * from thisyear
+
+
+select address, avg(soldprice) from thisyear
+where remarksforclients like '%pool%'
+group by address
+
+
+declare @PriceWithOutPool as float;
+select  @PriceWithOutPool = avg(soldprice) from thisyear
+where remarksforclients not like '%pool%'
+print @PriceWithOutPool  
+
+
+declare @PriceWithPool as float;
+select  @PriceWithPool = avg(soldprice) from thisyear
+where remarksforclients like '%pool%'
+print @PriceWithPool 
+
+print @PriceWithPool - @PriceWithOutPool
+
+
+
+
+
+DECLARE @averageSellingPrice as INT;
+DECLARE @sumSellingPrice as INT;
+DECLARE @numberOfRecords as INT;
+declare @soldprice as INT;
+declare @community as varchar(40);
+declare @type as varchar(12);
+Set @numberOfRecords = 0;
+DECLARE @dataCursor as Cursor;
+
+SET @dataCursor = CURSOR for
+select type, community, soldprice
+from thisyear;
+
+open @dataCursor
+while @@Fetch_Status=0
+
+BEGIN
+PRINT @soldprice;
+fetch next from @dataCursor into @type, @Community, @soldprice
+
+END
+print @numberOfRecords
+
+
+
+
+DECLARE @averageSellingPrice as INT;
+DECLARE @sumSellingPrice as INT;
+DECLARE @numberOfRecords as INT;
+declare @soldprice as INT;
+declare @community as varchar(40);
+declare @addresss as varchar(40);
+declare @type as varchar(12);
+Set @numberOfRecords = 0;
+DECLARE @dataCursor as Cursor;
+
+SET @dataCursor = CURSOR for
+select type, community, soldprice, address
+from thisyear;
+
+open @dataCursor
+while @@Fetch_Status=0
+
+BEGIN
+PRINT @soldprice;
+PRINT @type;
+PRINT @addresss;
+fetch next from @dataCursor into @type, @Community, @soldprice, @addresss
+
+END
+print @numberOfRecords
+
+
+
+DECLARE @averageSellingPrice as INT;
+DECLARE @sumSellingPrice as INT;
+DECLARE @numberOfRecords as INT;
+declare @soldprice as INT;
+declare @community as varchar(40);
+declare @addresss as varchar(40);
+declare @type as varchar(12);
+Set @numberOfRecords = 0;
+DECLARE @dataCursor as Cursor;
+
+SET @dataCursor = CURSOR for
+select type, community, soldprice, address
+from thisyear;
+
+open @dataCursor
+while @@Fetch_Status=0
+
+BEGIN
+if @type = 'Detached'
+PRINT @soldprice;
+PRINT @type;
+PRINT @addresss;
+fetch next from @dataCursor into @type, @Community, @soldprice, @addresss
+
+END
+print @numberOfRecords
