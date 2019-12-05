@@ -1,0 +1,13 @@
+select* from textarea
+
+
+SELECT LEN(TEXTLINE), textline as a from textarea
+order by LEN(TEXTLINE);
+ delete from textarea where LEN(textline) <62;
+ DELETE FROM textarea 
+where upper(textline) LIKE '%GIFT%';
+
+
+declare @teslaWorldCount as int;
+select @TeslaWorldCount = count(*) from textarea where upper(textline) like '%PRODUCT%';
+PRINT @TeslaWorldCount
