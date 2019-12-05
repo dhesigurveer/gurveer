@@ -11,3 +11,18 @@ where upper(textline) LIKE '%GIFT%';
 declare @teslaWorldCount as int;
 select @TeslaWorldCount = count(*) from textarea where upper(textline) like '%PRODUCT%';
 PRINT @TeslaWorldCount
+
+
+
+DECLARE @TEXTLINE VARCHAR(50);
+DECLARE MY_CURSOR CURSOR FOR
+SELECT TEXTLINE
+FROM TEXTAREA;
+OPEN MY_CURSOR;
+WHILE (2>1)
+BEGIN
+FETCH NEXT FROM MY_CURSOR INTO @TEXTLINE;
+PRINT @TEXTLINE
+END
+CLOSE MY_CURSOR
+DEALLOCATE MY_CURSOR
