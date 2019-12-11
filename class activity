@@ -1,0 +1,68 @@
+//part1
+
+//q1
+select s.class_id , from_where from program as p student as s where s. from_where = ‘TORONTO’
+And s.group_name = p.group_name
+
+
+//q2
+select s.student_id , st.instructor from student as s , program as p , schedule as st
+where s.group_name = p.group_name and p.class_id = st.class_id and st.instructor = 'Ms.Jones'
+
+//q3
+select s.student_name , st.date_time from student as s , program as p , schedule as st
+where s.group_name = p.group_name and p.class_id = st.class_id and St.date_time = 'mon_2'
+
+
+//q4
+select s.student_name , st.room_id from student as s , program as p , schedule as st
+where s.group_name = p.group_name and p.class_id = st.class_id and st.room_id = '11'
+
+//q5
+select st.room_id , p.program_name from program as p , schedule as st
+where p.class_id = st.class_id and st.room_id = '12'
+
+//q6
+select st.room_id , st.class_id, st.date_time, st.instructor,  p.program_name , p.group_name from program as p , schedule as st
+where p.class_id = st.class_id
+
+//q7
+select s.student_id,s.STUDENT_NAME, s.program_name , s.group_name, p.class_id from program as p left join student as s on s.group_name = p.group_name
+
+//q8
+select s.student_name , s.student_id , st.room_id , st.date_time , st.class_id , p.group_name from student as s , program as p , schedule as st
+where s.group_name = p.group_name and p.class_id = st.class_id and p.group_name = 'G2'
+
+//q9
+select s.student_name , s.student_id , st.room_id , st.date_time , st.class_id from student as s , program as p , schedule as st
+where s.group_name = p.group_name and p.class_id = st.class_id and p.program_name = 'ISBA1'
+
+
+--------PART-2
+--part a
+insert into student (student_id, student_name, program_name, group_name, from_where) values(130, 'sally', 'bus-1', 'g1', 'montreal')
+insert into program(program_id, program_name,  group_name, class_id) values(16, 'bus-1', 'g1', 'bu1113-g1')
+insert into schedule (schedule_id, class_id, room_id, instructor, datetime) values (16, 'bu1113-g1', '11', 'mr.smith', 'mon_1')
+
+ --part b
+
+insert into student(student_id, student_name, program_name, group_name, from_where) values(126, 'peanut', 'cet-II', 'g1', 'winipegg')
+insert into program(program_id, program_name,  group_name, class_id) values(17, 'cet-II', 'g1', 'in2003-g1')
+insert into schedule (schedule_id, class_id, room_id, instructor, datetime) values (17, 'in2003-g1', '11', 'ms.chen', 'fri_1')
+
+--part-c
+insert into student (student_id, student_name, program_name, group_name, from_where) values(131, 'vanny', 'bigdata', 'g1', 'london')
+insert into program(program_id, program_name,  group_name, class_id) values(18, 'bigdata', 'g1', 'in3437')
+insert into schedule (schedule_id, class_id, room_id, instructor, datetime) values (18, 'in3437', '11', 'mr.gates', 'sat_1')
+
+
+
+//part3
+
+create table customers(
+customer_id varchar(50),
+customer_name varchar(50),
+customer_phone varchar(50),
+bike_id varchar(50),
+PRIMARY KEY (customer_name),
+)
