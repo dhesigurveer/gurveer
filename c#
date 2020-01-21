@@ -1,0 +1,15 @@
+  Console.WriteLine("Enter your current meter reading :");
+            int meter_reading = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("Your current meter reading is: " + meter_reading);
+
+            int last_reading = 39803;
+            Console.WriteLine("The last month meter reading = " + last_reading);
+
+            double KWH = (meter_reading - last_reading);
+            Console.WriteLine("The total KWH`S USED = " + KWH);
+
+            double energy = KWH * 0.095;
+            Console.WriteLine("The total energy charge = " + energy);
+
+            double bill = (energy + 10.00);
+            Console.WriteLine("the total bill =" + bill);
