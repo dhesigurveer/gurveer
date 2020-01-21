@@ -18,3 +18,13 @@
             Console.WriteLine("The Standard energy fees = $" + Standard_fees);
             double bill = (energy + Standard_fees);
             Console.WriteLine("the total bill = $" + bill.ToString("C"));
+            
+            
+            
+             Console.WriteLine("Enter the radius of sphere:");
+            int radius = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("The radius of sphere is: " + radius);
+            const double pie = 3.14;
+            int number = 4;
+            double area = (number * pie * radius * radius);
+            Console.WriteLine("The area of Sphere = " + area);
