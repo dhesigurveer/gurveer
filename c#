@@ -1,4 +1,4 @@
-  Console.WriteLine("Enter your current meter reading :");
+   Console.WriteLine("Enter your current meter reading :");
             int meter_reading = Convert.ToInt32(Console.ReadLine());
             Console.WriteLine("Your current meter reading is: " + meter_reading);
 
@@ -8,8 +8,13 @@
             double KWH = (meter_reading - last_reading);
             Console.WriteLine("The total KWH`S USED = " + KWH);
 
-            double energy = KWH * 0.095;
-            Console.WriteLine("The total energy charge = " + energy);
+            // the value of charge per KWH is $0.095
+            const double charge_per_KWH = 0.095;
+            Console.WriteLine("The Charge per KWH = " + charge_per_KWH);
+            double energy = (KWH * charge_per_KWH);
+            Console.WriteLine("The total energy charge = $" + energy);
 
-            double bill = (energy + 10.00);
-            Console.WriteLine("the total bill =" + bill);
+            const double Standard_fees = 10.00;
+            Console.WriteLine("The Standard energy fees = $" + Standard_fees);
+            double bill = (energy + Standard_fees);
+            Console.WriteLine("the total bill = $" + bill);
