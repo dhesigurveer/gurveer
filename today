@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<HTML>
+	<head>
+		<title>Web Programming 2 - Class 4 </title>
+	</head>
+	<body>
+		<h1 class="colorred">Web Programming 2 - Class 4 - Class Assignment</h1>
+		<form id="calculate" name="calculate" >
+
+			<label for="exam1">Exam1:</label>
+			<input type="number" id="exam1">
+			<span>(1-25)</span>
+			
+			<br/>
+			<label for="exam2">Exam2:</label>
+			<input type="number" id="exam2">
+			<span>(1-25)</span>
+			<br/>
+			<label for="project">Project:</label>
+			<input type="number" id="project">
+			<span>(1-100 merge as 50% of the marks)</span>
+			<br/>
+			<span>Your Percentage is</span>
+			<span id="exam4"></span>
+			<span>%</span>
+			<br/>
+			<label for="grade">Your grade is:</label>
+			<span id="exam5"></span>
+			<br/>
+			
+			
+			
+			<input type="submit" onclick="Calculate();return false"/>
+		</form>
+		<footer>
+			<script>
+			function Calculate()
+			{
+				var exam1 = document.getElementById("exam1").value;
+				exam1 = parseFloat(exam1);
+
+				var exam2 = document.getElementById("exam2").value;
+				exam2 = parseFloat(exam2);
+				
+				var project = document.getElementById("project").value;
+				project = parseFloat(project);
+				
+			var sum  = exam1 + exam2 + (project/2);
+			document.getElementById("exam4").innerHTML = sum;
+			
+			
+			var grade = document.getElementById("exam5");
+			if (sum >80)
+			{
+			 grade.innerHTML = "A";
+			}	
+			
+			else if (sum>=60 && sum<=80)
+			{
+			grade.innerHTML = "B";
+			}
+			else
+			{
+			grade.innerHTML = "F";
+			}
+			}
+			
+			</script>
+		</footer>
+	</body>
+</HTML>
