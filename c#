@@ -111,5 +111,30 @@
         }
     }
     }
+    
+    _______________
+    using System;
+
+namespace Power
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int bas, exp1, powr=1, i;
+            Console.WriteLine("Enter the base:");
+            bas = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("Enter the exponent:");
+            exp1 = Convert.ToInt32(Console.ReadLine());
+            for (i=1; i <= exp1; i++)
+            {
+                powr = powr * bas;
+
+                Console.WriteLine("The power of is:" + powr);
+            }
+        }
+    }
+}
+
 
 
