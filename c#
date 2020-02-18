@@ -79,4 +79,37 @@
     }
 }
 
+----------------------------------------------------------------
+
+           {
+                int j, i, ctr, start, end;
+                Console.Write("Input starting number of range: ");
+                i = Convert.ToInt32(Console.ReadLine());
+
+                Console.Write("Input ending number of range : ");
+                end = Convert.ToInt32(Console.ReadLine());
+                Console.Write("The prime numbers between {0} and {1} are : \n",i, end);
+
+                for (j = i; j <= end; j++)
+                {
+                    ctr = 0;
+
+                    for (start = 2; start <= j / 2; start++)
+                    {
+                        if (j % start == 0)
+                        {
+                            ctr++;
+                            break;
+                        }
+                    }
+
+                    if (ctr == 0 && j != 1)
+                        Console.Write("{0} ", j);
+                }
+                Console.Write("\n");
+            }
+        }
+    }
+    }
+
 
