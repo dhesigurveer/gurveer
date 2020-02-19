@@ -69,3 +69,60 @@
 		</footer>
 	</body>
 </HTML>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+---------------------
+double salary = Double.parseDouble(JOptionPane.showInputDialog("Enter your salary: "));
+double yearsWorked = Double.parseDouble(JOptionPane.showInputDialog("Enter the years worked: "));
+double creditScore = Double.parseDouble(JOptionPane.showInputDialog("Enter your credit score: "));
+
+DecimalFormat formatter2 = new DecimalFormat("$##,#00.00");
+DecimalFormat formatter1 = new DecimalFormat("#0.0%");
+double interest = 0;
+
+if(salary >= 80000)
+{
+if(yearsWorked >5)
+{
+if(creditScore > 500 && creditScore <= 800)
+{
+interest = .025;
+JOptionPane.showMessageDialog(null,"Your Salary is " + formatter2.format(salary)
++ " and you are qualified for loan at percentage rate of " + formatter1.format(interest));
+}
+else if(creditScore > 400 && creditScore <= 500)
+{
+interest = .035;
+JOptionPane.showMessageDialog(null,"Your Salary is " + formatter2.format(salary)
++ " and you are qualified for loan at percentage rate of " + formatter1.format(interest));
+}
+else
+{
+JOptionPane.showMessageDialog(null,"You are not qualified because your credit score is low");
+}
+}
+else
+{
+JOptionPane.showMessageDialog(null,"You are not qualified because your years worked are less than 5 years.");
+}
+}
+else
+{
+JOptionPane.showMessageDialog(null,"You are not qualified because your salary is less than $80,000.");
+}
+
+}
+
+
